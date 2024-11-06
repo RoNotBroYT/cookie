@@ -1,39 +1,89 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cookie Clicker Game</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Cookie Clicker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+        }
+        #cookie {
+            width: 200px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        #counter {
+            font-size: 2em;
+            margin-top: 20px;
+        }
+        #shop {
+            margin-top: 30px;
+        }
+        .item {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
-    <div class="game-container">
-        <h1>Cookie Clicker</h1>
-        <p>You have <span id="cookie-count">0</span> cookies.</p>
-        <button id="cookie-button">Click for a cookie!</button>
-        
-        <div class="upgrades">
-            <h3>Upgrades</h3>
-            <button id="auto-clicker" disabled>Auto-Clicker (100 cookies)</button>
-            <p>Automatically clicks for you every second!</p>
-        </div>
 
-        <div class="shop">
-            <h3>Shop</h3>
-            <p>Buy upgrades to increase your cookie production!</p>
-            <div class="shop-item">
-                <h4>Click Power</h4>
-                <button id="click-power-upgrade" disabled>Upgrade Click Power (10 cookies)</button>
-                <p>Each click gives more cookies!</p>
-            </div>
-            <div class="shop-item">
-                <h4>Auto-Clicker Speed</h4>
-                <button id="auto-clicker-speed" disabled>Upgrade Auto-Clicker Speed (200 cookies)</button>
-                <p>Increase auto-clicker speed!</p>
-            </div>
+    <h1>Cookie Clicker</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Galleta_maria.jpg" id="cookie" alt="Cookie">
+    <div id="counter">Cookies: 0</div>
+
+    <div id="shop">
+        <h2>Shop</h2>
+        <div class="item" onclick="buyUpgrade(1)">
+            <p>Upgrade 1 (+1 per click)</p>
+            <p>Cost: <span id="cost1">10</span> cookies</p>
+        </div>
+        <div class="item" onclick="buyUpgrade(2)">
+            <p>Upgrade 2 (+5 per click)</p>
+            <p>Cost: <span id="cost2">50</span> cookies</p>
+        </div>
+        <div class="item" onclick="buyUpgrade(3)">
+            <p>Upgrade 3 (+10 per click)</p>
+            <p>Cost: <span id="cost3">100</span> cookies</p>
         </div>
     </div>
 
-    <script src="game.js"></script>
+    <script>
+        let cookies = 0;
+        let cookiesPerClick = 1;
+        let upgradeCosts = [10, 50, 100];
+        let upgradeValues = [1, 5, 10];
+
+        document.getElementById("cookie").onclick = function() {
+            cookies += cookiesPerClick;
+            updateCounter();
+        };
+
+        function updateCounter() {
+            document.getElementById("counter").textContent = "Cookies: " + cookies;
+        }
+
+        function buyUpgrade(upgrade) {
+            let cost = upgradeCosts[upgrade - 1];
+            let value = upgradeValues[upgrade - 1];
+
+            if (cookies >= cost) {
+                cookies -= cost;
+                cookiesPerClick += value;
+                upgradeCosts[upgrade - 1] = Math.floor(cost * 1.5);
+                document.getElementById("cost" + upgrade).textContent = upgradeCosts[upgrade - 1];
+                updateCounter();
+            }
+        }
+    </script>
+
 </body>
 </html>
+```
