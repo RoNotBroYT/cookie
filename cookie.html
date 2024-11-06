@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Clicker Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Cookie Clicker</h1>
+        <p>You have <span id="cookie-count">0</span> cookies.</p>
+        <button id="cookie-button">Click for a cookie!</button>
+        
+        <div class="upgrades">
+            <h3>Upgrades</h3>
+            <button id="auto-clicker" disabled>Auto-Clicker (100 cookies)</button>
+            <p>Automatically clicks for you every second!</p>
+        </div>
+
+        <div class="shop">
+            <h3>Shop</h3>
+            <p>Buy upgrades to increase your cookie production!</p>
+            <div class="shop-item">
+                <h4>Click Power</h4>
+                <button id="click-power-upgrade" disabled>Upgrade Click Power (10 cookies)</button>
+                <p>Each click gives more cookies!</p>
+            </div>
+            <div class="shop-item">
+                <h4>Auto-Clicker Speed</h4>
+                <button id="auto-clicker-speed" disabled>Upgrade Auto-Clicker Speed (200 cookies)</button>
+                <p>Increase auto-clicker speed!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
