@@ -24,7 +24,7 @@ function toggleBackgroundColor() {
         currentColor = "blue";
     }
 }
-
+ 
 function reloadGame() {
     cookies = 0;
     cookiesPerClick = 1;
