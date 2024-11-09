@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: blue;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s;
+}
+#cookie {
+    width: 200px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+#gold-cookie {
+    width: 100px;
+    cursor: pointer;
+    position: absolute;
+    display: none;
+    z-index: 100;
+}
+#counter {
+    font-size: 2em;
+    margin-top: 20px;
+}
+#shop {
+    margin-top: 30px;
+    display: none;
+}
+.item {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    background-color: lightblue;
+    cursor: pointer;
+}
+.item:hover {
+    background-color: #add8e6;
+}
+#colorToggleButton, #reloadButton, #shopButton {
+    margin: 20px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: lightblue;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+footer {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #888;
+}
+#roNotBroButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#roNotBroButton:hover {
+    background-color: #45a049;
+}
+#githubButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#githubButton:hover {
+    background-color: #555;
+}
