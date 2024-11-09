@@ -17,7 +17,7 @@ body {
     position: absolute;
     display: none;
     z-index: 100;
-}
+} 
 #counter {
     font-size: 2em;
     margin-top: 20px;
