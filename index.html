@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Clicker</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Linking to the external CSS file -->
+</head>
+<body>
+
+    <h1>Cookie Clicker</h1>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8y9zXAAAAmklEQVRIDbXBAQEAAAABIP6PzgpVwcW4jAOuA4dohRh4m7Qfs9T3sExwVbbFnVrpu5GOhIMV8p9gXM6qoxCx80eHJW0cq2cAAAAAElFTkSuQmCC" id="cookie" alt="Cookie">
+    <img src="https://cdn.pixabay.com/photo/2017/10/30/14/05/cookie-2903059_960_720.png" id="gold-cookie" alt="Gold Cookie">
+
+    <div id="counter">Cookies: 0</div>
+
+    <button id="colorToggleButton" onclick="toggleBackgroundColor()">Toggle Background Color</button>
+    <button id="reloadButton" onclick="reloadGame()">Reload Game</button>
+    <button id="shopButton" onclick="toggleShop()">Shop</button>
+
+    <div id="shop">
+        <h2>Shop</h2>
+        <div class="item" onclick="buyUpgrade(1)">
+            <p>Upgrade 1 (+1 per click)</p>
+            <p>Cost: <span id="cost1">10</span> cookies</p>
+        </div>
+        <div class="item" onclick="buyUpgrade(2)">
+            <p>Upgrade 2 (+5 per click)</p>
+            <p>Cost: <span id="cost2">50</span> cookies</p>
+        </div>
+        <div class="item" onclick="buyUpgrade(3)">
+            <p>Upgrade 3 (+10 per click)</p>
+            <p>Cost: <span id="cost3">100</span> cookies</p>
+        </div>
+        <div class="item" onclick="buyFactory()">
+            <p>Cookie Factory (+1 cookie per second)</p>
+            <p>Owned: <span id="factories">0</span></p>
+            <p>Cost: <span id="factoryCost">200</span> cookies</p>
+        </div>
+        <div class="item" onclick="buyMine()">
+            <p>Cookie Mine (+5 cookies per second)</p>
+            <p>Owned: <span id="mines">0</span></p>
+            <p>Cost: <span id="mineCost">1000</span> cookies</p>
+        </div>
+        <div class="item" onclick="buyFarm()">
+            <p>Cookie Farm (+20 cookies per second)</p>
+            <p>Owned: <span id="farms">0</span></p>
+            <p>Cost: <span id="farmCost">5000</span> cookies</p>
+        </div>
+        <div class="item" onclick="buyPlanet()">
+            <p>Cookie Planet (+2000 cookies per second)</p>
+            <p>Owned: <span id="planets">0</span></p>
+            <p>Cost: <span id="planetCost">9000</span> cookies</p>
+        </div>
+        <div class="item" onclick="buyBomb()">
+            <p>Cookie Bomb (+10000 cookies per second)</p>
+            <p>Owned: <span id="bombs">0</span></p>
+            <p>Cost: <span id="bombCost">40000</span> cookies</p>
+        </div>
+        <div class="item" onclick="buyNuke()">
+            <p>Cookie Nuke (+1000000 cookies per second)</p>
+            <p>Owned: <span id="nukes">0</span></p>
+            <p>Cost: <span id="nukeCost">20000000</span> cookies</p>
+        </div>
+    </div>
+
+    <footer>By Rohan</footer>
+
+    <button id="roNotBroButton" onclick="window.open('https://www.youtube.com/@RoNotBroYT', '_blank')">
+        RoNotBroYT
+    </button>
+
+    <!-- GitHub Button -->
+    <button id="githubButton" onclick="window.open('https://github.com/RoNotBroYT/cookie', '_blank')">
+        My GitHub
+    </button>
+
+    <script src="scripts.js"></script> <!-- Linking to the external JavaScript file -->
+</body>
+</html>
